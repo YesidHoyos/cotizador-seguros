@@ -8,10 +8,11 @@ class Form extends Component {
         this.yearRef = React.createRef();
         this.basicPlanRef = React.createRef();
         this.completePlanRef = React.createRef();
+        this.quoteSafe = this.quoteSafe.bind(this);
     }
     
 
-    quoteSafe = (e) => {
+    quoteSafe(e){
         e.preventDefault();
         
         const plan = this.basicPlanRef.current.checked ? 'Basico':'Completo'
